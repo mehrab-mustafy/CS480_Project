@@ -1,0 +1,72 @@
+@use "variables";
+
+:root {
+	font-family: variables.$font;
+	color: variables.$text-color;
+	background-color: variables.$bg-color;
+
+	--bg-color: #{variables.$alabaster};
+	--fg-color: #{variables.$mercury};
+	--text-color: #{variables.$emperor};
+	--alt-text-color: #{variables.$tundora};
+	--highlight-color: #{variables.$parsley};
+	--highlight-color-2: #{variables.$cello};
+	--highlight-color-3: #{variables.$clover};
+	--highlight-color-4: #{variables.$sapphire};
+	--italic-color: #{variables.$stiletto};
+	--bold-color: #{variables.$eminence};
+	--bold-bold-color: #{variables.$honey-flower};
+	color-scheme: light;
+}
+
+a,
+hr,
+caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: variables.$highlight-color;
+}
+
+b,
+strong {
+	color: variables.$bold-color;
+}
+
+i,
+em {
+	color: variables.$italic-color;
+}
+
+body {
+	margin: 0px;
+}
+
+main {
+	margin: 8px;
+}
+
+button {
+	color: variables.$text-color;
+	background-color: variables.$fg-color;
+	border: 1px solid variables.$text-color;
+	border-radius: 10px;
+	padding: 6px 8px;
+
+	&:hover {
+		color: variables.$fg-color;
+		background-color: variables.$text-color;
+		border: 1px solid variables.$fg-color;
+	}
+}
+
+table,
+th,
+td {
+	border: 1px solid variables.$highlight-color;
+	border-collapse: collapse;
+	padding: 5px;
+}

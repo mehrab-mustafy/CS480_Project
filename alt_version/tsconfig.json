@@ -1,0 +1,71 @@
+{
+	"include": [
+		"next-env.d.ts",
+		"next.config.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts"
+	],
+	"exclude": ["node_modules"],
+	"compilerOptions": {
+		// Type Checking
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+
+		// Modules
+		"module": "esnext", // Next.js required.
+		"moduleResolution": "bundler", // Next.js required.
+		"resolveJsonModule": true, // Next.js required.
+
+		// Emit
+		"noEmit": true, // Next.js required.
+
+		// JavaScript Support
+		"allowJs": true, // Next.js required.
+		"checkJs": true, // Next.js required.
+
+		// Editor Support
+		"plugins": [{ "name": "next" }], // Next.js required.
+
+		// Interop Constraints
+		"esModuleInterop": true,
+		"verbatimModuleSyntax": true,
+
+		// Backwards Compatibility
+		// N/A
+
+		// Language and Environment
+		"jsx": "preserve", // Next.js required.
+		"lib": ["dom", "dom.iterable", "esnext"], // Next.js required.
+		"target": "esnext",
+
+		// Compiler Diagnostics
+		// N/A
+
+		// Projects
+		"composite": true,
+		"incremental": true, // Next.js required.
+
+		// Output Formatting
+		// N/A
+
+		// Completeness
+		"skipLibCheck": true
+
+		// Command Line
+		// N/A
+
+		// Watch Options
+		// N/A
+	}
+}
