@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Your Orders</h1>
+{% if orders %}
+<ul>
+    {% for order in orders %}
+    <li>
+        <strong>Order ID:</strong> {{ order.id }}<br>
+        <strong>Date:</strong> {{ order.date.strftime('%Y-%m-%d') }}<br>
+        <strong>Total Amount:</strong> ${{ "%.2f"|format(order.total_amount) }}<br>
+        <strong>Status:</strong> {{ order.status }}<br>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You have no orders.</p>
+{% endif %}
+{% endblock %}

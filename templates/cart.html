@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Your Shopping Cart</h1>
+{% if products_with_quantity %}
+<ul>
+    {% for item in products_with_quantity %}
+    <li>{{ item.product.name }} - ${{ item.product.price }} x {{ item.quantity }}
+        <form action="{{ url_for('remove_from_cart', product_id=item.product.id) }}" method="POST">
+            <input type="submit" value="Remove">
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+<p>Total: ${{ cart_total }}</p>
+<form action="{{ url_for('checkout') }}" method="POST">
+    <input type="submit" value="Proceed to Checkout" class="btn btn-primary">
+</form>
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Vendor Dashboard</h1>
+<a href="{{ url_for('add_product') }}">Add New Product</a>
+<div class="product-list">
+    {% for product in products %}
+    <div class="product-item">
+        <h2>{{ product.name }}</h2>
+        <p>Price: ${{ product.price }}</p>
+        <form method="POST" action="{{ url_for('delete_product', product_id=product.id) }}">
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
